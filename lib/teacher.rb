@@ -1,3 +1,5 @@
+require_relative '../lib/user.rb'
+
 class Teacher < User
 
 
@@ -6,5 +8,6 @@ class Teacher < User
   def teach 
     KNOWLEDGE.sample
   end
+
   
 end
