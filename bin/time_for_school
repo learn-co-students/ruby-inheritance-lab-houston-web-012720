@@ -12,9 +12,21 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Halpert"
+
+# jim.learn(avi.teach) #User cannot call Student methods
+
+harlem = Student.new
+harlem.first_name = "Harlem"
+harlem.last_name = "Shake"
 
 some_knowledge = avi.teach 
 
 steve.learn(some_knowledge)
+harlem.learn(avi.teach)
+harlem.learn(avi.teach)
 
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Harlem just learned these things: #{harlem.knowledge.join(", ")}"
